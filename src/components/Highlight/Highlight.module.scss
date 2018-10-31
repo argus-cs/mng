@@ -1,0 +1,11 @@
+.highlight_wrap {
+  position: absolute;
+  width: 90%;
+  height: var(--highlight-height);
+  left: 5%;
+  bottom: calc(var(--highlight-height) / -1.3);
+  border-radius: 2px;
+  z-index: 5;
+  background-color: var(--text-dark-theme);
+  box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.3), 0px 2px 6px 2px rgba(60, 64, 67, 0.15);
+}
