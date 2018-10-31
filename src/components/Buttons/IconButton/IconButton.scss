@@ -1,0 +1,127 @@
+.wrap_btn{
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+  align-items: center;
+  transition: background-color .4s ease-out .1s, color .4s ease-out .1s;
+  justify-content: center;
+
+  & i[class=material-icons] {
+    position: relative;
+    font-size: 21px;
+  }
+
+  &[data-tooltip]{
+    &::before {
+      content: attr(data-tooltip);
+      position: absolute;
+      display: flex;
+      height: var(--tooltip-height);
+      opacity: 0;
+      color: var(--sidebar-secondary-text-color);
+      padding: 0 15px;
+      border-radius: 2px;
+      align-items: center;
+      transform: scale(0,0);
+      background-color: var(--main-overlay-bgc);
+      transition: opacity .1s ease, transform .3s ease-out;
+
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14px;
+      white-space: nowrap;
+      letter-spacing: .1px;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        transform: scale(1,1);
+        transition: opacity .4s ease, transform .3s ease-in;
+      }
+    }
+  }
+
+  &[tooltip-direction*="top"] {
+    &::before {
+      top: calc(-3px - var(--tooltip-height));
+    }
+  }
+  
+  &[tooltip-direction*="left"] {
+    &::before {
+      left: 0;
+    }
+  }
+  
+  &[tooltip-direction*="right"] {
+    &::before {
+      right: 0;
+    }
+  }
+  
+  &[tooltip-direction*="bottom"] {
+    &::before {
+      bottom: calc(-3px - var(--tooltip-height));
+    }
+  }
+
+}
+
+.bordered {
+  border-radius: 1px;
+}
+
+.btn_reader {
+  color: var(--main-header-text-color);
+  background-color: var(--main-overlay-bgc);
+
+  &:hover{
+    color: #9299B3;
+    background-color: hsl(255, 10.5%, 29.8%);
+    /* circle transition: cubic-bezier(.79,.14,.15,.86) */
+    transition: background-color .2s cubic-bezier(.79,.14,.15,.86), color .3s cubic-bezier(.79,.14,.15,.86); 
+  }
+}
+
+.btn_reader_sidebar {
+  height: 40px !important;
+  width: 40px !important;
+  color: var(--sidebar-secondary-text-color);
+  background-color: transparent;
+
+  &:hover{
+    color: var(--sidebar-highlight-text-color);
+    background-color: rgba(0,0,0,.10);
+  }
+}
+
+.loadIcon {
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    top: calc(-1em / 2);
+    left: calc(-1em / 2);
+    font-size: 24px;
+    border-radius: 2px;
+    animation: loadIconPulse 3s ease-in infinite alternate ;
+  }
+}
+
+@keyframes loadIconPulse {
+  0%, 60%, 100% {
+    background-color: #71778F;
+    opacity: .4;
+  }
+  40%{
+    background-color: #71778F;
+    opacity: 0;
+  }
+}
