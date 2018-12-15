@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import classNames from 'classnames/bind'
 
 // layout
-import Layout from '../../layouts/Master'
+import Layout from '../../layouts/Reader'
 
 // style
 import s from './Reader.scss'
