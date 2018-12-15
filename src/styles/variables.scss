@@ -1,14 +1,29 @@
 :root {
-  --bgc-primary-color: hsl(223, 19%, 93%);
-  --text-primary-color: hsl(217, 9%, 28%);
+  --subheader-border-dark-theme: hsla(0, 0%, 80%, .3);
 
-  --overlayer-color: hsl(254, 26%, 13%);
+  /**
+  * dark color scheme
+  * see coolors.co/1d192a-232939-4f689c-e6e6e6-ff890c
+  * scheme online;
+  */
+  --primary-color: hsl(254, 25%, 13%);
+  --secondary-color: hsl(224, 24%, 18%);
+  --highlight-color: hsl(221, 33%, 46%); // #0087e0
+  
+  --text-color-primary: hsl(0, 0%, 90%);
+  --text-color-secondary: hsl(0, 0%, 82%);
+  --title-text-highlight: hsl(0, 0%, 99%);
+  --text-color-highlight: hsl(31, 100%, 52%);
 
-  --bgc-dark-theme: hsl(224, 24%, 18%);
-  --subheader-dark-theme: hsl(220, 33%, 46%);
-  --text-dark-theme: hsl(0, 0%, 90%);
+  /**
+  * base styles scheme
+  */
+  --base-font-size: 16px;
+  --base-font-family: 'Nunito', sans-serif;
 
   --header-height: 50px;
   --hero-height: 100vh;
   --highlight-height: 320px;
+  --subheader-height: 50px;
+  --subheader-sentinel-heigth: 60px;
 }

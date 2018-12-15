@@ -7,5 +7,30 @@
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  user-select: none;
+  font-size: var(--base-font-size);
+  font-family: var(--base-font-family);
+  color: var(--text-color-primary);
+  background-color: var(--secondary-color);
+}
+
+.text {
+  min-height: 1em;
+  min-width: 90px;
+  border-radius: calc(0.5em / 2);
+}
+
+.load_text {
+  animation: loadPulse 3s ease-in infinite alternate ;
+}
+
+@keyframes loadPulse {
+  0%, 60%, 100% {
+    background-color: #71778F;
+    opacity: .4;
+  }
+  40%{
+    background-color: #71778F;
+    opacity: 0;
+  }
 }

@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './styles/style.global.scss'
 import App from './core/app'
 import Store from './store'
 import * as serviceWorker from './serviceWorker'
+
+import './styles/style.global.scss'
 
 ReactDOM.render(<App store={Store} />, document.getElementById('root'))
 
