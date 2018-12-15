@@ -6,7 +6,7 @@ import classNames from 'classnames/bind'
 import s from './Header.scss'
 
 // logo
-import brand from './brand.svg'
+import { ReactComponent as Logo } from '../../assets/images/logo.svg';
 
 // binding style
 let cx = classNames.bind(s)
@@ -23,7 +23,7 @@ const Header = props => {
   return (
     <header className={wrapperStiky}>
       <div className={brandStiky}>
-        <img src={brand} alt="brand_logo" />
+        <Logo />
       </div>
     </header>
   )
